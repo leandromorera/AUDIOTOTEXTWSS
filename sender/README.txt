@@ -1,0 +1,1 @@
+python transcriber_cuda_2.py --url ws://192.168.0.110:8765/stream --device "Altavoces / Auriculares (Realtek Audio)" --loopback --model small --chunk 0.75 --rate 16000 --silence_rms 0.008

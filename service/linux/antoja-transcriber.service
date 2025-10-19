@@ -1,0 +1,16 @@
+[Unit]
+Description=ANTOJA Whisper Transcriber (AUDIO CAPTURE → MESSAGE RECEIVER)
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=C:/AUDIOTRANSCRIBER/antoja/sender
+EnvironmentFile=C:/AUDIOTRANSCRIBER/antoja/sender/.env
+ExecStart=python C:/AUDIOTRANSCRIBER/antoja/sender/transcriber.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

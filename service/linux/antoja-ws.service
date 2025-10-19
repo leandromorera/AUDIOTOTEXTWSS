@@ -1,0 +1,15 @@
+[Unit]
+Description=ANTOJA WebSocket MESSAGE RECEIVER
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=C:/AUDIOTRANSCRIBER/receiver
+ExecStart=python3 C:/AUDIOTRANSCRIBER/receiver/ws_server.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
